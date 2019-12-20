@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
 class NewBoxForm extends Component {
-    
-    static defaultProps = {
-        height: 100,
-        width: 100,
-        color: 'white',
-    }
 
     constructor(props){
         super(props);
@@ -17,10 +11,18 @@ class NewBoxForm extends Component {
 
     handleSubmit(evt) {
         evt.preventDefault();
-        //createBox
-        this.props.createNewBox(this.state.height, this.state.width, this.state.color);
-
-        this.setState({height:'', width:''});
+        if (this.state.height === ''){
+            alert("Please fill out a height create a box")
+        } else if (this.state.width === '') {
+            alert("Please fill out a width to create a box.")
+        } else if (this.state.color === '') {
+            alert("Please fill out a color to create a box.")
+        } else {    
+            //createBox
+            this.props.createNewBox(this.state.height, this.state.width, this.state.color);
+    
+            this.setState({height:'', width:''});
+        }
     }
 
     handleChange(evt){
