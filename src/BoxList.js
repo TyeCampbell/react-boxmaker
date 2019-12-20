@@ -8,6 +8,10 @@ class BoxList extends Component {
         super(props);
     }
 
+    createNewBox(ht, wd, color) {
+        
+    }
+
     render() {
         return(
             <div>

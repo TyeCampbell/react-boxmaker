@@ -8,8 +8,15 @@ class Box extends Component {
     }
 
     render(){
+        
+        const boxStyling = {
+            height: '100px',
+            width: '100px',
+            backgroundColor: 'blue',
+        }
+        
         return(
-            <div className='box'></div>
+            <div style={boxStyling} className='box'></div>
         )
     }
 }
