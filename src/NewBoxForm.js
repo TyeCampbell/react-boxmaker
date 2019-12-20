@@ -14,9 +14,9 @@ class NewBoxForm extends Component {
         this.setState({length:'', width:''});
     }
 
-    handleChange(evt) {
+    handleChange(evt){
         this.setState({
-            length: evt.target.value,
+            [evt.target.name]: evt.target.value,
         })
     }
 
@@ -26,12 +26,11 @@ class NewBoxForm extends Component {
                 <h1>📦 Create-A-Box 📦</h1>
                 <form onSubmit={this.handleSubmit}> 
                      <label htmlFor='length'>Length: </label>
-                     <input value={this.state.length} onChange={this.handleChange}/>
+                     <input value={this.state.length} name='length' onChange={this.handleChange}/>
                      <label htmlFor='width'>Width: </label>
-                     <input/>
+                     <input value={this.state.width} name='width' onChange={this.handleChange}/>
                      <button>Create Box</button>
                 </form>
-            <h1>{this.state.length}</h1>
             </div>
         )
     }

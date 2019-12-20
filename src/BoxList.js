@@ -12,6 +12,7 @@ class BoxList extends Component {
         return(
             <div>
                 <NewBoxForm/>
+                <Box/>
             </div>
         )
     }
