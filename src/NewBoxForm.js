@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class NewBoxForm extends Component {
+    
+    static defaultProps = {
+        height: 100,
+        width: 100,
+        color: 'white',
+    }
+
     constructor(props){
         super(props);
         this.state = { height: '', width: '', color: '',};
@@ -12,6 +19,7 @@ class NewBoxForm extends Component {
         evt.preventDefault();
         //createBox
         this.props.createNewBox(this.state.height, this.state.width, this.state.color);
+
         this.setState({height:'', width:''});
     }
 
