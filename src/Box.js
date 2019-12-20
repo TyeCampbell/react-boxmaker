@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import './Box.css'
 
 class Box extends Component {
-    constructor(props){
-        super(props);
-
+    
+    static defaultProps = {
+        height: 100,
+        width: 100,
+        color: 'white',
     }
 
     render(){
         
         const boxStyling = {
-            height: '100px',
-            width: '100px',
-            backgroundColor: 'blue',
+            height: this.props.height + "px",
+            width: this.props.width + "px",
+            backgroundColor: this.props.color,
         }
         
         return(

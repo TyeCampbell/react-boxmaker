@@ -21,7 +21,7 @@ class NewBoxForm extends Component {
             //createBox
             this.props.createNewBox(this.state.height, this.state.width, this.state.color);
     
-            this.setState({height:'', width:''});
+            this.setState({height:'', width:'', color: ''});
         }
     }
 
