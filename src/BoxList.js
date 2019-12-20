@@ -6,17 +6,27 @@ import Box from './Box';
 class BoxList extends Component {
     constructor(props){
         super(props);
+        this.state = {
+            boxes: [],
+        }
     }
 
-    createNewBox(ht, wd, color) {
-        
+    createNewBox(h, w, color) {
+        alert("New Box with a height of: " + h +". A width of: " + w + ". And color of: " + color + ".")
+        // this.setState(st => ({
+        //     boxes: st.boxes.concat(<Box/>)
+        // }));
+
     }
+
+
 
     render() {
         return(
             <div>
-                <NewBoxForm/>
+                <NewBoxForm createNewBox={this.createNewBox}/>
                 <Box/>
+                {this.state.boxes}
             </div>
         )
     }
