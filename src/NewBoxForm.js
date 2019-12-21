@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NewBoxForm.css';
 
 class NewBoxForm extends Component {
 
@@ -33,7 +34,7 @@ class NewBoxForm extends Component {
 
     render(){
         return(
-            <div>
+            <div className='newBoxForm'>
                 <h1>📦 Create-A-Box 📦</h1>
                 <form onSubmit={this.handleSubmit}> 
                      <label htmlFor='height'>Height: </label>
