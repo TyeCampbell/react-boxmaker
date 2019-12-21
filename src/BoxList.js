@@ -15,9 +15,9 @@ class BoxList extends Component {
 
     createNewBox(h, w, color) {
         
-        alert("New Box with a height of: " + h +". A width of: " + w + ". And color of: " + color + ".")
+        const id = uuid()
 
-        const newBox = <Box key={uuid()} height={h} width={w} color={color}/>;
+        const newBox = <Box key={id} id={id} height={h} width={w} color={color} removeBox={this.removeBox}/>;
 
         this.setState(st => ({
             boxes: st.boxes.concat(newBox)
@@ -25,7 +25,9 @@ class BoxList extends Component {
 
     }
 
-
+    removeBox(id) {
+        console.log(id);
+    }
 
     render() {
         return(

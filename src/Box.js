@@ -9,6 +9,15 @@ class Box extends Component {
         color: 'white',
     }
 
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(evt){
+       this.props.removeBox(this.props.id)
+    }
+
     render(){
         
         const boxStyling = {
@@ -18,7 +27,7 @@ class Box extends Component {
         }
         
         return(
-            <div style={boxStyling} className='box'></div>
+            <div style={boxStyling} onClick={this.handleClick}></div>
         )
     }
 }
