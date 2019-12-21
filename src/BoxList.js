@@ -11,6 +11,7 @@ class BoxList extends Component {
             boxes: [],
         }
         this.createNewBox = this.createNewBox.bind(this);
+        this.removeBox = this.removeBox.bind(this);
     }
 
     createNewBox(h, w, color) {
@@ -26,7 +27,9 @@ class BoxList extends Component {
     }
 
     removeBox(id) {
-        console.log(id);
+        const remainingBoxes = this.state.boxes.filter(bx => bx.props.id !== id);
+
+        this.setState({boxes: remainingBoxes});
     }
 
     render() {

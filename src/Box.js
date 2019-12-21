@@ -27,7 +27,7 @@ class Box extends Component {
         }
         
         return(
-            <div style={boxStyling} onClick={this.handleClick}></div>
+            <div style={boxStyling} className='box' onClick={this.handleClick}></div>
         )
     }
 }
