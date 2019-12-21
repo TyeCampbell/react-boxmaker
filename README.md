@@ -17,7 +17,9 @@ Practice working with React forms.
 
 ### What I've Learned
 
-* IN PROGRESS... 
+* evt.prentDefault() stops the default page reload of a form
+* How to handle multiple inputs with one function, rather than a function per input on a form. 
+* How vital it is to understand how to iterate over data and access the needed information for the application. 
 
 
 :thumbsup: *Thanks for checking out my work on GitHub! For more about me find me on Twitter [@TyeDev](https://twitter.com/tyedev) or visit my personal website [TyeCampbell.com](www.TyeCampbell.com).*
