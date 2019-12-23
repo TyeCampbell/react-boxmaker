@@ -5,7 +5,7 @@ class NewBoxForm extends Component {
 
     constructor(props){
         super(props);
-        this.state = { height: '', width: '', color: '',};
+        this.state = {height: '', width: '', color: '',};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -37,12 +37,12 @@ class NewBoxForm extends Component {
             <div className='newBoxForm'>
                 <h1>📦 Create-A-Box 📦</h1>
                 <form onSubmit={this.handleSubmit}> 
-                     <label htmlFor='height'>Height: </label>
-                     <input value={this.state.height} name='height' onChange={this.handleChange}/>
-                     <label htmlFor='width'>Width: </label>
-                     <input value={this.state.width} name='width' onChange={this.handleChange}/>
-                     <label htmlFor='color'>Color: </label>
-                     <input value={this.state.color} name='color' onChange={this.handleChange}/>
+                     <label htmlFor='height '>Height: </label>
+                     <input value={this.state.height} id='height' name='height' onChange={this.handleChange}/>
+                     <label htmlFor='width' >Width: </label>
+                     <input value={this.state.width} id='width' name='width' onChange={this.handleChange}/>
+                     <label htmlFor='color' >Color: </label>
+                     <input value={this.state.color} id='color' name='color' onChange={this.handleChange}/>
                      <button>Create Box</button>
                 </form>
             </div>

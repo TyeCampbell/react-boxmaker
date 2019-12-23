@@ -11,14 +11,21 @@ class BoxList extends Component {
             boxes: [],
         }
         this.createNewBox = this.createNewBox.bind(this);
-        this.removeBox = this.removeBox.bind(this);
     }
 
     createNewBox(h, w, color) {
         
         const id = uuid()
 
-        const newBox = <Box key={id} id={id} height={h} width={w} color={color} removeBox={this.removeBox}/>;
+        const newBox = 
+            <Box 
+            key={id} 
+            id={id} 
+            height={h} 
+            width={w} 
+            color={color} 
+            removeBox={() => this.removeBox(id)}
+            />;
 
         this.setState(st => ({
             boxes: st.boxes.concat(newBox)
@@ -27,9 +34,7 @@ class BoxList extends Component {
     }
 
     removeBox(id) {
-        const remainingBoxes = this.state.boxes.filter(bx => bx.props.id !== id);
-
-        this.setState({boxes: remainingBoxes});
+        this.setState({boxes: this.state.boxes.filter(bx => bx.props.id !== id)});
     }
 
     render() {
@@ -48,3 +53,4 @@ export default BoxList;
 
 
 
+ 

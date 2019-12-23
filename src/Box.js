@@ -3,31 +3,16 @@ import './Box.css'
 
 class Box extends Component {
     
-    static defaultProps = {
-        height: 100,
-        width: 100,
-        color: 'white',
-    }
-
-    constructor(props){
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(evt){
-       this.props.removeBox(this.props.id)
-    }
-
     render(){
         
         const boxStyling = {
-            height: this.props.height + "px",
-            width: this.props.width + "px",
+            height: this.props.height + "em",
+            width: this.props.width + "em",
             backgroundColor: this.props.color,
         }
         
         return(
-            <div style={boxStyling} className='box' onClick={this.handleClick}></div>
+            <div style={boxStyling} className='box' onClick={this.props.removeBox}></div>
         )
     }
 }
